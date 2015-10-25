@@ -114,8 +114,10 @@ module.exports = (function() {
                var srcMedium = img.getAttribute('data-src-medium');
                var srcLarge = img.getAttribute('data-src-large');
                var srcFull = img.getAttribute('data-src-full16x9');
+               var caption = img.getAttribute('alt');
                if(srcFull) {
                   Article.images.push({
+                     caption: caption,
                      mini: srcMini,
                      xsmall: srcXSmall,
                      small: srcSmall,
