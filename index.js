@@ -73,6 +73,16 @@ module.exports = (function() {
             } catch(e) {}
 
             var body = dom.getElementById('body-text');
+            if(!body) {
+               if(cb) {
+                  cb(null);
+               } else {
+                  defer.resolve(null);
+               }
+
+               return false;
+            }
+
             var ps = body.getElementsByTagName('p');
 
             var bodyCleanStrings = [];
@@ -153,8 +163,7 @@ module.exports = (function() {
                                day + ' ' +
                                hour + ':' +
                                minute + ':' +
-                               '00 -0500';
-
+                               '00 GMT-0000';
 
             if(cb) {
                cb(Article);
