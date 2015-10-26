@@ -39,6 +39,7 @@ var Article = {
    },
    images: [
       {
+         caption: '',
          mini: '',
          xsmall: '',
          small: '',
