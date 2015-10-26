@@ -133,8 +133,8 @@ module.exports = (function() {
                var caption = img.getAttribute('alt');
                if(srcFull) {
                   var found = false;
-                  for(var i = 0; i < Article.images.length; i++) {
-                     if(Article.images[i].full === srcFull) {
+                  for(var k = 0; k < Article.images.length; k++) {
+                     if(Article.images[k].full === srcFull) {
                         found = true;
                      }
                   }
